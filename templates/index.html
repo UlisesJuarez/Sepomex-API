@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+SEPOMEX
+{% endblock %}
+
+{% block content %}
+<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+
+<div class="container">
+    <div class="row">
+        <h2>Bienvenido a la api de SEPOMEX</h2>
+        <div>
+            <a target="_blank" href="https://documenter.getpostman.com/view/19268642/UyrEib5r">Ver documentación<img
+                    src="{{url_for('static', filename='img/documentacion.png')}}" alt="documentacion logo"></a>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <h3>Buscar en la API</h3>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Estados</h4>
+            <a class="btn btn-primary" href="/estados">Ver todo</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Municipios</h4>
+            <a class="btn btn-primary" href="/municipios">Ver todo</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Colonias</h4>
+            <a class="btn btn-primary" href="/colonias">Ver todo</a>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <h3>Agregar nuevos datos</h3>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Estado</h4>
+            <a class="btn btn-primary" href="/nuevo_estado">Nuevo</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Municipio</h4>
+            <a class="btn btn-primary" href="/nuevo_municipio">Nuevo</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h4>Colonia</h4>
+            <a class="btn btn-primary" href="/nueva_colonia">Nueva</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Nueva colonia
+{% endblock %}
+
+{% block content %}
+<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="formulario">
+            <h1 class="form-title">Nueva colonia</h1>
+            {{ wtf.quick_form(form,button_map={"submit": "primary"}) }}
+        </div>
+        <div class="formulario">
+            <a href="/"><img src="{{url_for('static', filename='img/regresar.png')}}" alt="regresar"></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
